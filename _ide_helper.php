@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.10 on 2016-01-14.
+ * Generated for Laravel 5.2.10 on 2016-01-18.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -10254,6 +10254,35 @@ namespace {
          */
         public static function getNames(){
             return \Illuminate\View\Factory::getNames();
+        }
+        
+    }
+
+
+    class MessageSender extends \App\Werashop\Message\Facades\MessageSender{
+        
+        /**
+         * 
+         *
+         * @param int $start
+         * @param int $end
+         * @return int 
+         * @static 
+         */
+        public static function generateMessageVerify($start = 0, $end = 999999){
+            return \App\Werashop\Message\LuosimaoMessageSender::generateMessageVerify($start, $end);
+        }
+        
+        /**
+         * 
+         *
+         * @param $phone
+         * @param $verify
+         * @return int 
+         * @static 
+         */
+        public static function sendMessageVerify($phone, $verify){
+            return \App\Werashop\Message\LuosimaoMessageSender::sendMessageVerify($phone, $verify);
         }
         
     }
