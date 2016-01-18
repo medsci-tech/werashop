@@ -2,9 +2,8 @@
 
 namespace App\Providers;
 
-use App\Warashop\Message\LuosimaoMessageSender;
+use App\Werashop\Message\LuosimaoMessageSender;
 use Illuminate\Support\ServiceProvider;
-use App\Warashop\Message\MessageSenderInterface;
 
 class MessageServiceProvider extends ServiceProvider
 {

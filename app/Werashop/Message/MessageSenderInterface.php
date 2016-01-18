@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Warashop\Message;
+namespace App\Werashop\Message;
 
 
 interface MessageSenderInterface

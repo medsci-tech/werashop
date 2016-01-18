@@ -1,7 +1,8 @@
-<?php namespace App\Warashop\Message\Facades;
+<?php
+
+namespace App\Werashop\Message\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use App\Warashop\Message\MessageSenderInterface;
 
 
 class MessageSender extends Facade

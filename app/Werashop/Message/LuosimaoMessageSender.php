@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Warashop\Message;
+namespace App\Werashop\Message;
 
 
 /**
  * Class LuosimaoMessageSender
- * @package App\Warashop\Message
+ * @package App\Werashop\Message
  */
 class LuosimaoMessageSender implements MessageSenderInterface
 {
