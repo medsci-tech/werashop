@@ -2,13 +2,13 @@
 
 namespace App;
 
-use App\Models\Role;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\User
  *
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Role[] $roles
+ * @mixin \Eloquent
  */
 class User extends Authenticatable
 {
