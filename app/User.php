@@ -13,7 +13,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use HasRoles;
-    use HasShops;
     /**
      * The attributes that are mass assignable.
      *
