@@ -14,10 +14,18 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id')->index();
+            $table->unsignedInteger('user_id');
             $table->double('total_price')->default(0.00);
-            $table->unsignedInteger('order_status_id')->index()->default(0);
+            $table->unsignedInteger('order_status_id')->default(0);
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
+
+            $table->foreign('order_status_id')
+                ->references('id')
+                ->on('order_statuses');
         });
     }
 
@@ -28,6 +36,10 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropForeign('orders_user_id_foreign');
+            $table->dropForeign('orders_order_status_id_foreign');
+        });
         Schema::drop('orders');
     }
 }

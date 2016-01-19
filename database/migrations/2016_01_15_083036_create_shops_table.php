@@ -15,9 +15,14 @@ class CreateShopsTable extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->unsignedInteger('locale_id')->nullable();
             $table->text('address');
             $table->text('remark');
             $table->timestamps();
+
+            $table->foreign('locale_id')
+                ->references('id')
+                ->on('locales');
         });
     }
 
