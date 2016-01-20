@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  *
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Role[] $roles
  * @mixin \Eloquent
+ * @mixin \App\HasRoles
  */
 class User extends Authenticatable
 {

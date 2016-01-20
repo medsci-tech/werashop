@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class HasRoles
  * @package App
- * @mixin Model
+ * @mixin User
  */
 trait HasRoles
 {
@@ -46,6 +46,26 @@ trait HasRoles
 
         if ($role instanceof Role) {
             return $this->roles()->save($role, ['shop_id' => $shop_id]);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param $role mixed
+     * @param $shop_id int
+     * @return $this|Model
+     */
+    public function removeRole($role, $shop_id = 1)
+    {
+        if (is_string($role)) {
+            return $this->roles()->wherePivot('shop_id', $shop_id)->detach(
+                Role::whereName($role)->firstOrfail()
+            );
+        }
+
+        if ($role instanceof Role) {
+            return $this->roles()->wherePivot('shop_id', $shop_id)->detach($role);
         }
 
         return $this;

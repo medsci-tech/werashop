@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use App\Warashop\Message\MessageSenderInterface;
+use App\Werashop\Message\MessageSenderInterface;
 
 class MessageSenderTest extends TestCase
 {
@@ -16,6 +16,7 @@ class MessageSenderTest extends TestCase
     public function testSenderObjectCanBeRetrieved()
     {
         $testObject = \MessageSender::getFacadeRoot();
+
         $this->assertInstanceOf(MessageSenderInterface::class, $testObject);
     }
 
