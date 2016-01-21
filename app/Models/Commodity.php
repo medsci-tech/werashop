@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Werashop\Cart\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,6 +10,26 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @mixin \Eloquent
  */
-class Commodity extends Model
+class Commodity extends Model implements Buyable
 {
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function getIdentifer()
+    {
+        return $this->id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getImageSet()
+    {
+        return [];
+        //TODO
+    }
 }
