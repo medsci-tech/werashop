@@ -7,6 +7,7 @@ use App\User;
 
 class UserAuthorizationTest extends TestCase
 {
+    use DatabaseTransactions;
     /**
      * A basic test example.
      *
@@ -20,8 +21,8 @@ class UserAuthorizationTest extends TestCase
     public function testUserRoleInShop()
     {
         $user = User::find('2');
-        $this->assertTrue($user->hasRoleInShop('manager', 2));
         $this->assertTrue($user->hasRoleInShop('manager', 1));
+        $this->assertTrue($user->hasRoleInShop('manager', 2));
         $this->assertFalse($user->hasRoleInShop('assistant', 1));
         $this->assertFalse($user->hasRoleInShop('assistant', 2));
 

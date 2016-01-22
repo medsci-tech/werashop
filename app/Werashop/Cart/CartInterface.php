@@ -8,7 +8,9 @@ interface CartInterface
 {
     public function addItem(Buyable $item, $amount = 1);
 
-    public function removeItem(int $id_in_cart);
+    public function removeItemsById(int $id);
+
+    public function removeItems(array $query);
 
     public function flush();
 

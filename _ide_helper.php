@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.10 on 2016-01-18.
+ * Generated for Laravel 5.2.10 on 2016-01-21.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -10283,6 +10283,83 @@ namespace {
          */
         public static function sendMessageVerify($phone, $verify){
             return \App\Werashop\Message\LuosimaoMessageSender::sendMessageVerify($phone, $verify);
+        }
+        
+    }
+
+
+    class Cart extends \App\Werashop\Cart\Facades\Cart{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getInstance(){
+            return \App\Werashop\Cart\SessionDrivenCart::getInstance();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function addItem($item, $amount = 1){
+            return \App\Werashop\Cart\SessionDrivenCart::addItem($item, $amount);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function removeItemsById($id){
+            return \App\Werashop\Cart\SessionDrivenCart::removeItemsById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function removeItems($query){
+            return \App\Werashop\Cart\SessionDrivenCart::removeItems($query);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function flush(){
+            return \App\Werashop\Cart\SessionDrivenCart::flush();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getItems(){
+            return \App\Werashop\Cart\SessionDrivenCart::getItems();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getTotalCost(){
+            return \App\Werashop\Cart\SessionDrivenCart::getTotalCost();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function checkout(){
+            return \App\Werashop\Cart\SessionDrivenCart::checkout();
         }
         
     }

@@ -17,7 +17,7 @@ class CreateCommoditiesTable extends Migration
             $table->unsignedInteger('shop_id');
             $table->string('name');
             $table->string('remark');
-            $table->string('price');
+            $table->decimal('price');
             $table->timestamps();
 
             $table->foreign('shop_id')

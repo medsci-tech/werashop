@@ -86,5 +86,19 @@ class TestSeeder extends Seeder
             'permission_id' => 1,
             'role_id' => 1,
         ]);
+
+        DB::table('commodities')->insert([
+            'shop_id' => 2,
+            'name' => '苹果',
+            'remark' => '来自火星的苹果,很难吃',
+            'price' => 1024.00
+        ]);
+
+        DB::table('commodities')->insert([
+            'shop_id' => 1,
+            'name' => '梨子',
+            'remark' => '来自火星的梨子,很好吃',
+            'price' => 128.00
+        ]);
     }
 }
