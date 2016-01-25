@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\MessageServiceProvider::class,
+        App\Providers\CartServiceProvider::class,
 
         /*
          * Barryvdh's Laravel IDE helper.
@@ -207,6 +208,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'MessageSender'   => App\Werashop\Message\Facades\MessageSender::class,
+        'Cart'      =>App\Werashop\Cart\Facades\Cart::class,
 
     ],
 

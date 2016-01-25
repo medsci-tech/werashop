@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Permission;
+use App\Models\Shop;
+use App\User;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -30,9 +32,11 @@ class AuthServiceProvider extends ServiceProvider
 
         try {
             foreach ($this->getPermissions() as $permission) {
-                $gate->define($permission->name, function ($user) use ($permission) {
-                    return $user->hasRole($permission->roles());
-                });
+                for ($shop_id = 1; $shop_id <= Shop::count(); $shop_id++ ) {
+                    $gate->define($permission->name.'|'.$shop_id, function (User $user) use ($permission, $shop_id) {
+                        return $user->hasRoleInShop($permission->roles(), $shop_id);
+                    });
+                }
             }
         } catch (QueryException $e) {
             if (\App::environment('local')) {
