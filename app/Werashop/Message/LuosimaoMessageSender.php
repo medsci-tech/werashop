@@ -10,8 +10,6 @@ namespace App\Werashop\Message;
  */
 class LuosimaoMessageSender implements MessageSenderInterface
 {
-
-
     /**
      * @param int $start
      * @param int $end
