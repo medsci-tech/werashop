@@ -23,6 +23,7 @@ trait HasRoles
 
 
     /**
+     * @param int $shop_id
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function rolesInShop($shop_id)
