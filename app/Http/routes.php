@@ -26,8 +26,13 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('test', function(){
+    Route::get('shop', function(){
         return view('shop.shop_index')->with([
+        ]);
+    });
+
+    Route::get('shop_category', function(){
+        return view('shop.shop_category')->with([
         ]);
     });
 });

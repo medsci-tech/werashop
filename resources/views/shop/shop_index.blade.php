@@ -35,9 +35,11 @@
             <p class="nav-active">首页</p>
         </div>
         <div class="nav-button">
+            <a href="shop_category">
             <img src="../image/shop_nav/classification.png" alt=""><br>
 
             <p>分类</p>
+            </a>
         </div>
         <div class="nav-button">
             <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
