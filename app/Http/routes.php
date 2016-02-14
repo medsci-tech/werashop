@@ -39,10 +39,12 @@ Route::group(['middleware' => ['web']], function () {
         ]);
     });
 
+    Route::get('github', function (Request $request) {
+        exec("git pull whplay master");
+    });
+
     Route::post('github', function (Request $request) {
-        echo exec("git stash", $d);
-        echo exec("git checkout master", $d);
-        dd($d);
+        exec("git pull whplay master");
     });
 
 });
