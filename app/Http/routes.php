@@ -37,4 +37,8 @@ Route::group(['middleware' => ['web']], function () {
         return view('shop.shop_category')->with([
         ]);
     });
+
+    Route::post('github', function (Request $request) {
+        Log::info($request->all());
+    });
 });
