@@ -14,15 +14,11 @@ class CreateCommoditiesTable extends Migration
     {
         Schema::create('commodities', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('shop_id');
             $table->string('name');
             $table->string('remark');
             $table->decimal('price');
             $table->timestamps();
 
-            $table->foreign('shop_id')
-                ->references('id')
-                ->on('shops');
         });
 
         Schema::create('commodity_order', function (Blueprint $table) {
@@ -51,9 +47,6 @@ class CreateCommoditiesTable extends Migration
         Schema::table('commodity_order', function (Blueprint $table) {
             $table->dropForeign('commodity_order_commodity_id_foreign');
             $table->dropForeign('commodity_order_order_id_foreign');
-        });
-        Schema::table('commodities', function (Blueprint $table) {
-            $table->dropForeign('commodities_shop_id_foreign');
         });
         Schema::drop('commodity_order');
         Schema::drop('commodities');
