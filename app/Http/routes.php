@@ -43,7 +43,4 @@ Route::group(['middleware' => ['web']], function () {
         Log::info($request->all());
     });
 
-    Route::post('test', function (Request $request) {
-        Log::info($request->all());
-    });
 });
