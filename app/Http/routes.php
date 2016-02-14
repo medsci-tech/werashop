@@ -40,7 +40,9 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::post('github', function (Request $request) {
-        exec("git pull whplay monstercai");
+        echo exec("git stash", $d);
+        echo exec("git checkout master", $d);
+        dd($d);
     });
 
 });
