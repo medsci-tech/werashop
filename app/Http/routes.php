@@ -46,5 +46,4 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('github', function (Request $request) {
         echo exec("git pull whplay master");
     });
-
 });
