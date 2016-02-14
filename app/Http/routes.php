@@ -41,4 +41,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('github', function (Request $request) {
         Log::info($request->all());
     });
+
+    Route::post('test', function (Request $request) {
+        Log::info($request->all());
+    });
 });
