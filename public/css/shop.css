@@ -79,7 +79,7 @@ a, a:focus, a:hover {
         font-size: 13px;
         color: #a3a3a3; }
   .container .col-xs-6:last-child {
-    margin-bottom: 50px; }
+    margin-bottom: 48px; }
 
 .nav-active {
   color: #f71212; }
@@ -87,6 +87,7 @@ a, a:focus, a:hover {
 .category {
   padding: 0px; }
   .category .col-xs-3 {
+    position: fixed;
     padding: 0px;
     text-align: center; }
     .category .col-xs-3 li {
@@ -100,7 +101,8 @@ a, a:focus, a:hover {
       border-left: 5px solid #f71212;
       padding-right: 5px; }
   .category .col-xs-9 {
-    padding: 0px; }
+    padding: 0px;
+    float: right; }
 
 .order-form {
   border-bottom: 1px solid #dddddd; }

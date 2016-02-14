@@ -35,4 +35,19 @@ Route::group(['middleware' => ['web']], function () {
         return view('shop.shop_category')->with([
         ]);
     });
+
+    Route::get('shop_cart', function(){
+        return view('shop.shop_cart')->with([
+        ]);
+    });
+
+    Route::get('shop_order', function(){
+        return view('shop.shop_order')->with([
+        ]);
+    });
+
+    Route::get('shop_person', function(){
+        return view('shop.shop_person')->with([
+        ]);
+    });
 });

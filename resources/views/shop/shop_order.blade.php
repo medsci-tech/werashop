@@ -12,29 +12,39 @@
 
   <nav class="navbar-fixed-bottom">
     <div class="nav-button">
-      <img src="../image/shop_nav/HOME.png" alt=""><br>
+      <a href="shop">
+        <img src="../image/shop_nav/HOME.png" alt=""><br>
 
-      <p>首页</p>
+        <p>首页</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/classification.png" alt=""><br>
+      <a href="shop_category">
+        <img src="../image/shop_nav/classification.png" alt=""><br>
 
-      <p>分类</p>
+        <p>分类</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
+      <a href="shop_cart">
+        <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
 
-      <p >购物车</p>
+        <p>购物车</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/NOTEPAD-1.png" alt=""><br>
+      <a href="shop_order">
+        <img src="../image/shop_nav/NOTEPAD-1.png" alt=""><br>
 
-      <p class="nav-active">订单</p>
+        <p class="nav-active">订单</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/USER.png" alt=""><br>
+      <a href="shop_person">
+        <img src="../image/shop_nav/USER.png" alt=""><br>
 
-      <p>个人</p>
+        <p>个人</p>
+      </a>
     </div>
   </nav>
 

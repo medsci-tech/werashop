@@ -25,19 +25,25 @@
       <p class="nav-active">分类</p>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
+      <a href="shop_cart">
+        <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
 
-      <p>购物车</p>
+        <p>购物车</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/NOTEPAD.png" alt=""><br>
+      <a href="shop_order">
+        <img src="../image/shop_nav/NOTEPAD.png" alt=""><br>
 
-      <p>订单</p>
+        <p>订单</p>
+      </a>
     </div>
     <div class="nav-button">
-      <img src="../image/shop_nav/USER.png" alt=""><br>
+      <a href="shop_person">
+        <img src="../image/shop_nav/USER.png" alt=""><br>
 
-      <p>个人</p>
+        <p>个人</p>
+      </a>
     </div>
   </nav>
 
@@ -57,6 +63,7 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥22</span>
 
@@ -68,6 +75,7 @@
 
       <p>葡萄糖压片糖果</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥29</span>
 
@@ -79,6 +87,7 @@
 
       <p>OGTT测试杯</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥20</span>
 
@@ -90,6 +99,7 @@
 
       <p>一次性使用无菌</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥22</span>
 
@@ -101,6 +111,7 @@
 
       <p>碱性泡腾片</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥22</span>
 
@@ -112,6 +123,7 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥22</span>
 
@@ -123,6 +135,7 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
+
       <div>
         <span>￥22</span>
 
