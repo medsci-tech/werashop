@@ -40,7 +40,7 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::post('github', function (Request $request) {
-        Log::info($request->all());
+        exec("git pull whplay monstercai");
     });
 
 });
