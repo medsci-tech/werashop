@@ -30,6 +30,7 @@
 
     <nav class="navbar-fixed-bottom">
         <div class="nav-button">
+<<<<<<< HEAD
             <a href="shop">
                 <img src="../image/shop_nav/HOME-1.png" alt=""><br>
 
@@ -38,12 +39,21 @@
         </div>
         <div class="nav-button">
             <a href="category">
+=======
+            <img src="../image/shop_nav/HOME-1.png" alt=""><br>
+
+            <p class="nav-active">首页</p>
+        </div>
+        <div class="nav-button">
+            <a href="shop_category">
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
                 <img src="../image/shop_nav/classification.png" alt=""><br>
 
                 <p>分类</p>
             </a>
         </div>
         <div class="nav-button">
+<<<<<<< HEAD
             <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
 
             <p>购物车</p>
@@ -57,6 +67,27 @@
             <img src="../image/shop_nav/USER.png" alt=""><br>
 
             <p>个人</p>
+=======
+            <a href="shop_cart">
+                <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
+
+                <p>购物车</p>
+            </a>
+        </div>
+        <div class="nav-button">
+            <a href="shop_order">
+                <img src="../image/shop_nav/NOTEPAD.png" alt=""><br>
+
+                <p>订单</p>
+            </a>
+        </div>
+        <div class="nav-button">
+            <a href="shop_person">
+                <img src="../image/shop_nav/USER.png" alt=""><br>
+
+                <p>个人</p>
+            </a>
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
         </div>
     </nav>
 
@@ -67,7 +98,10 @@
 
             <p>一次性使用无菌注射针</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥22</span>
 
@@ -79,7 +113,10 @@
 
             <p>葡萄糖压片糖果</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥29</span>
 
@@ -91,7 +128,10 @@
 
             <p>OGTT测试杯</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥20</span>
 
@@ -103,7 +143,10 @@
 
             <p>一次性使用无菌</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥22</span>
 
@@ -115,7 +158,10 @@
 
             <p>碱性泡腾片</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥22</span>
 
@@ -127,7 +173,10 @@
 
             <p>一次性使用无菌注射针</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥22</span>
 
@@ -139,7 +188,10 @@
 
             <p>一次性使用无菌注射针</p>
             <img class="img-responsive" src="../image/test02.png" alt="">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
             <div>
                 <span>￥22</span>
 

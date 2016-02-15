@@ -36,6 +36,10 @@ $shop_border: 2px solid #eee;
   }
 
   .row {
+<<<<<<< HEAD
+=======
+    background-color: #ffffff;
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
     .col-xs-6:first-child {
       height: 200px;
       img {
@@ -100,7 +104,11 @@ $shop_border: 2px solid #eee;
     }
   }
   .col-xs-6:last-child {
+<<<<<<< HEAD
     margin-bottom: 50px;
+=======
+    margin-bottom: 48px;
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
   }
 
 }
@@ -112,6 +120,10 @@ $shop_border: 2px solid #eee;
 .category {
   padding: 0px;
   .col-xs-3 {
+<<<<<<< HEAD
+=======
+    position: fixed;
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
     padding: 0px;
     text-align: center;
     li {
@@ -130,5 +142,54 @@ $shop_border: 2px solid #eee;
 
   .col-xs-9 {
     padding: 0px;
+<<<<<<< HEAD
   }
+=======
+    float: right;
+  }
+}
+
+.order-form {
+  p {
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid #dddddd;
+    span {
+      float: right;
+      color: #f71212;
+    }
+    .order-finished {
+      color: #a3a3a3;
+    }
+    small {
+      color: #a3a3a3;
+    }
+  }
+  p:last-child {
+    margin-top: 64px;
+    border-top: 1px solid #dddddd;
+  }
+  .img-group {
+    margin-right: 15%;
+
+    div {
+      padding-right: 0px;
+      img {
+        width: 64px;
+      }
+    }
+
+  }
+  .arrow {
+    position: absolute;
+    top: 55px;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
+    transform: rotate(-45deg);
+  }
+  border-bottom: 1px solid #dddddd;
+>>>>>>> 33a5bf8aecde65299fe50698cfe7f80ca66d69be
 }
