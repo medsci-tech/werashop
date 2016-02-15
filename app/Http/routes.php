@@ -12,9 +12,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -47,15 +44,16 @@ Route::group(['middleware' => ['web']], function () {
         ]);
     });
 
+    Route::get('shop_person', function(){
+        return view('shop.shop_person')->with([
+        ]);
+    });
+
     Route::get('shop', function(){
         return view('shop.shop_index')->with([
         ]);
     });
 
-    Route::get('category', function(){
-        return view('shop.shop_category')->with([
-        ]);
-    });
 
 
     Route::get('shop_person', function(){

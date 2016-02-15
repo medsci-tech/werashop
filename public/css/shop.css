@@ -25,18 +25,20 @@ a, a:focus, a:hover {
         margin-bottom: 2px; }
       .container .navbar-fixed-bottom .nav-button img {
         width: 35%; }
-  .container .row .col-xs-6:first-child {
-    height: 200px; }
-    .container .row .col-xs-6:first-child img {
-      width: 90px;
-      float: right; }
-  .container .row .col-xs-6:nth-child(2), .container .row .col-xs-6:nth-child(3) {
-    height: 100px; }
-    .container .row .col-xs-6:nth-child(2) img, .container .row .col-xs-6:nth-child(3) img {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      width: 42px; }
+  .container .row {
+    background-color: #ffffff; }
+    .container .row .col-xs-6:first-child {
+      height: 200px; }
+      .container .row .col-xs-6:first-child img {
+        width: 90px;
+        float: right; }
+    .container .row .col-xs-6:nth-child(2), .container .row .col-xs-6:nth-child(3) {
+      height: 100px; }
+      .container .row .col-xs-6:nth-child(2) img, .container .row .col-xs-6:nth-child(3) img {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 42px; }
   .container .col-xs-6 {
     border-right: 2px solid #eee;
     border-bottom: 2px solid #eee;
@@ -77,7 +79,7 @@ a, a:focus, a:hover {
         font-size: 13px;
         color: #a3a3a3; }
   .container .col-xs-6:last-child {
-    margin-bottom: 50px; }
+    margin-bottom: 48px; }
 
 .nav-active {
   color: #f71212; }
@@ -85,6 +87,7 @@ a, a:focus, a:hover {
 .category {
   padding: 0px; }
   .category .col-xs-3 {
+    position: fixed;
     padding: 0px;
     text-align: center; }
     .category .col-xs-3 li {
@@ -98,6 +101,39 @@ a, a:focus, a:hover {
       border-left: 5px solid #f71212;
       padding-right: 5px; }
   .category .col-xs-9 {
-    padding: 0px; }
+    padding: 0px;
+    float: right; }
+
+.order-form {
+  border-bottom: 1px solid #dddddd; }
+  .order-form p {
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid #dddddd; }
+    .order-form p span {
+      float: right;
+      color: #f71212; }
+    .order-form p .order-finished {
+      color: #a3a3a3; }
+    .order-form p small {
+      color: #a3a3a3; }
+  .order-form p:last-child {
+    margin-top: 64px;
+    border-top: 1px solid #dddddd; }
+  .order-form .img-group {
+    margin-right: 15%; }
+    .order-form .img-group div {
+      padding-right: 0px; }
+      .order-form .img-group div img {
+        width: 64px; }
+  .order-form .arrow {
+    position: absolute;
+    top: 55px;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
+    transform: rotate(-45deg); }
 
 /*# sourceMappingURL=shop.css.map */
