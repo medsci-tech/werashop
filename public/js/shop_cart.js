@@ -52,7 +52,9 @@ var shop_cart = new Vue({
       }
     },
     numAdd: function (e) {
-      e.num ++;
+      if( e.num <= 98 ){
+        e.num++;
+      }
     }
   }
 });
