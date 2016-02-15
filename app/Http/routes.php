@@ -41,11 +41,11 @@ Route::group(['middleware' => ['web']], function () {
 
 //github回调事件推送
 Route::get('github', function (Request $request) {
-    exec("git pull whplay master");
+    echo exec("git pull whplay master");
 });
 
 Route::post('github', function (Request $request) {
-    exec("git pull whplay master");
+    echo exec("git pull whplay master");
 });
 
 Route::get('/', 'Wechat\WechatInitialController@checkSignature');
