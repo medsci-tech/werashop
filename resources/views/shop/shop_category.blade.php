@@ -63,7 +63,6 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥22</span>
 
@@ -75,7 +74,6 @@
 
       <p>葡萄糖压片糖果</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥29</span>
 
@@ -87,7 +85,6 @@
 
       <p>OGTT测试杯</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥20</span>
 
@@ -99,7 +96,6 @@
 
       <p>一次性使用无菌</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥22</span>
 
@@ -111,7 +107,6 @@
 
       <p>碱性泡腾片</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥22</span>
 
@@ -123,7 +118,6 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥22</span>
 
@@ -135,7 +129,6 @@
 
       <p>一次性使用无菌注射针</p>
       <img class="img-responsive" src="../image/test02.png" alt="">
-
       <div>
         <span>￥22</span>
 

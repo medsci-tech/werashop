@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -49,5 +50,19 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('shop_person', function(){
         return view('shop.shop_person')->with([
         ]);
+    });
+
+    Route::get('shop', function(){
+        return view('shop.shop_index')->with([
+        ]);
+    });
+
+
+    Route::get('github', function (Request $request) {
+        echo exec("git pull whplay master");
+    });
+
+    Route::post('github', function (Request $request) {
+        echo exec("git pull whplay master");
     });
 });

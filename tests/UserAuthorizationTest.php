@@ -21,14 +21,14 @@ class UserAuthorizationTest extends TestCase
     public function testUserRoleInShop()
     {
         $user = User::find('2');
-        $this->assertTrue($user->hasRoleInShop('manager', 1));
-        $this->assertTrue($user->hasRoleInShop('manager', 2));
-        $this->assertFalse($user->hasRoleInShop('assistant', 1));
-        $this->assertFalse($user->hasRoleInShop('assistant', 2));
+        $this->assertTrue($user->hasRole('manager'));
+        $this->assertTrue($user->hasRole('manager'));
+        $this->assertFalse($user->hasRole('assistant'));
+        $this->assertFalse($user->hasRole('assistant'));
 
-        $user->removeRole('manager', 1);
-        $this->assertFalse($user->hasRoleInShop('manager', 1));
-        $user->assignRole('assistant', 2);
-        $this->assertTrue($user->hasRoleInShop('assistant', 2));
+        $user->removeRole('manager');
+        $this->assertFalse($user->hasRole('manager'));
+        $user->assignRole('assistant');
+        $this->assertTrue($user->hasRole('assistant'));
     }
 }

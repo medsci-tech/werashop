@@ -18,35 +18,23 @@ trait HasRoles
      */
     public function roles()
     {
-        return $this->belongsToMany(Role::class)->withPivot('shop_id');
-    }
-
-
-    /**
-     * @param int $shop_id
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function rolesInShop($shop_id)
-    {
-        return $this->belongsToMany(Role::class)->wherePivot('shop_id', $shop_id)->withPivot('shop_id');
+        return $this->belongsToMany(Role::class);
     }
 
     /**
      * @param $role mixed
-     * @param $shop_id int
      * @return $this|Model
      */
-    public function assignRole($role, $shop_id = 1)
+    public function assignRole($role)
     {
         if (is_string($role)) {
             return $this->roles()->save(
-                Role::whereName($role)->firstOrfail(),
-                ['shop_id' => $shop_id]
+                Role::whereName($role)->firstOrfail()
             );
         }
 
         if ($role instanceof Role) {
-            return $this->roles()->save($role, ['shop_id' => $shop_id]);
+            return $this->roles()->save($role);
         }
 
         return $this;
@@ -54,19 +42,18 @@ trait HasRoles
 
     /**
      * @param $role mixed
-     * @param $shop_id int
      * @return $this|Model
      */
-    public function removeRole($role, $shop_id = 1)
+    public function removeRole($role)
     {
         if (is_string($role)) {
-            return $this->roles()->wherePivot('shop_id', $shop_id)->detach(
+            return $this->roles()->detach(
                 Role::whereName($role)->firstOrfail()
             );
         }
 
         if ($role instanceof Role) {
-            return $this->roles()->wherePivot('shop_id', $shop_id)->detach($role);
+            return $this->roles()->detach($role);
         }
 
         return $this;
@@ -83,18 +70,5 @@ trait HasRoles
         }
 
         return !! $role->intersect($this->roles()->get())->count();
-    }
-
-    /**
-     * @param $role
-     * @param $shop_id int
-     * @return bool
-     */
-    public function hasRoleInShop($role, $shop_id)
-    {
-        if (is_string($role)) {
-            return $this->roles()->wherePivot('shop_id', $shop_id)->get()->contains('name', $role);
-        }
-        return !! $role->get()->intersect($this->roles()->wherePivot('shop_id', $shop_id)->get())->count();
     }
 }

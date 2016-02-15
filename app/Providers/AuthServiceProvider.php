@@ -32,11 +32,9 @@ class AuthServiceProvider extends ServiceProvider
 
         try {
             foreach ($this->getPermissions() as $permission) {
-                for ($shop_id = 1; $shop_id <= Shop::count(); $shop_id++ ) {
-                    $gate->define($permission->name.'|'.$shop_id, function (User $user) use ($permission, $shop_id) {
-                        return $user->hasRoleInShop($permission->roles(), $shop_id);
-                    });
-                }
+                $gate->define($permission->name, function (User $user) use ($permission) {
+                    return $user->hasRole($permission->roles());
+                });
             }
         } catch (QueryException $e) {
             if (\App::environment('local')) {
