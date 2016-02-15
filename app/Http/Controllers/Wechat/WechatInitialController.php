@@ -13,7 +13,7 @@ class WechatInitialController extends Controller
         $timestamp = $request->input("timestamp");
         $nonce = $request->input("nonce");
 
-        $token = TOKEN;
+        $token = env('WX_TOKEN');
         $tmpArr = array($token, $timestamp, $nonce);
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode( $tmpArr );
