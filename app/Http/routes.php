@@ -15,7 +15,6 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -28,6 +27,25 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+    Route::get('shop', function(){
+        return view('shop.shop_index')->with([
+        ]);
+    });
+
+    Route::get('shop_category', function(){
+        return view('shop.shop_category')->with([
+        ]);
+    });
+
+    Route::get('shop_cart', function(){
+        return view('shop.shop_cart')->with([
+        ]);
+    });
+
+    Route::get('shop_order', function(){
+        return view('shop.shop_order')->with([
+        ]);
+    });
 
     Route::get('shop', function(){
         return view('shop.shop_index')->with([
@@ -47,4 +65,8 @@ Route::group(['middleware' => ['web']], function () {
         exec("git pull whplay master");
     });
 
+    Route::get('shop_person', function(){
+        return view('shop.shop_person')->with([
+        ]);
+    });
 });
