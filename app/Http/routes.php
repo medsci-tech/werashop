@@ -3,39 +3,22 @@
 use Illuminate\Http\Request;
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('shop', function(){
-        return view('shop.shop_index')->with([
-        ]);
+
+    Route::group(['prefix' => 'shop', 'namespace' => 'Shop'], function () {
+        Route::get('/', 'ShopController@index');
+        Route::get('category', 'ShopController@category');
     });
 
-    Route::get('shop_category', function(){
-        return view('shop.shop_category')->with([
-        ]);
+    Route::group(['prefix' => 'cart', 'namespace' => 'Cart'], function () {
+        Route::get('/', 'CartController@index');
     });
 
-    Route::get('shop_cart', function(){
-        return view('shop.shop_cart')->with([
-        ]);
+    Route::group(['prefix' => 'personal', 'namespace' => 'Personal'], function () {
+        Route::get('/', 'PersonalController@index');
     });
 
-    Route::get('shop_order', function(){
-        return view('shop.shop_order')->with([
-        ]);
-    });
-
-    Route::get('shop_person', function(){
-        return view('shop.shop_person')->with([
-        ]);
-    });
-
-    Route::get('shop', function(){
-        return view('shop.shop_index')->with([
-        ]);
-    });
-
-    Route::get('shop_person', function(){
-        return view('shop.shop_person')->with([
-        ]);
+    Route::group(['prefix' => 'order', 'namespace' => 'Order'], function () {
+        Route::get('/list', 'OrderController@list');
     });
 });
 
