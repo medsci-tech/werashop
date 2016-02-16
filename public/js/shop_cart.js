@@ -26,36 +26,53 @@ var shop_cart = new Vue({
         priceBefore: 30.00,
         num: 1,
       }
-    ]
+    ],
+    person: {
+      beans: 900,
+      consume: 0,
+    }
   },
 
   computed: {
-    priceCount: function(){
-      var count = 0;
-      for( i=0 ; i<this.cart.length ; i++){
-        count += this.cart[i].price*this.cart[i].num;
-      };
-      return count;
+    priceAll: function () {
+      var all = 0;
+      for (i = 0; i < this.cart.length; i++) {
+        all += this.cart[i].price * this.cart[i].num;
+      }
+      return all;
     },
+    priceDiscount: function () {
+      if (this.person.consume > this.person.beans || this.person.consume > this.priceAll * 100) {
+        this.person.consume =
+          this.person.beans < this.priceAll * 100 ? this.person.beans : this.priceAll * 100;
+      }
+      return this.person.consume / 100;
+    },
+    priceCount: function () {
+      return this.priceAll + 8 - this.priceDiscount;
+    }
+
   },
 
   methods: {
     removeGoods: function (e) {
       this.cart.$remove(e);
     },
-    priceAll: function (e) {
+    priceGoods: function (e) {
       return e.price * e.num;
     },
     numMinus: function (e) {
-      if( e.num >= 2 ){
+      if (e.num >= 2) {
         e.num--;
       }
     },
     numAdd: function (e) {
-      if( e.num <= 98 ){
+      if (e.num <= 98) {
         e.num++;
       }
-    }
+    },
+    beansConsume: function () {
+    },
   }
 });
 
