@@ -12,7 +12,7 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
-        dd($request->input('openid'));
+        dd($request);
         return view('shop.index');
     }
 
