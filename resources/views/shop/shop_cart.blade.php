@@ -32,6 +32,7 @@
             <span @click="numMinus(goods)">－</span>
             <input v-model='goods.num' number debounce="300" type="text" maxlength="2"
                    onkeyup="this.value=this.value.replace(/[^1-9]/g,'')"
+                   onblur="if( this.value == 0 ) this.value = 1;"
             >
             <span @click="numAdd(goods)">＋</span>
           </div>
