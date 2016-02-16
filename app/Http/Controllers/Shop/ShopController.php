@@ -10,8 +10,9 @@ use App\Http\Controllers\Controller;
 
 class ShopController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        dd($request->all());
         return view('shop.index');
     }
 

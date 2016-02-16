@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Wechat;
 
+use App\Werashop\Wechat\Wechat;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Overtrue\Wechat\Menu;
+use Overtrue\Wechat\MenuItem;
 
 class WechatInitialController extends Controller
 {
@@ -25,4 +28,5 @@ class WechatInitialController extends Controller
             return false;
         }
     }
+
 }
