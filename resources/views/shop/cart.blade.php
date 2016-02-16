@@ -53,7 +53,7 @@
       <p>商品价格<span>{{ priceAll | currency '￥' }}</span></p>
       <p>运费 <span>￥8.00</span></p>
       <p>迈豆折扣
-        <span>{{ priceDiscount | currency '￥' }}</span>
+        <span>－{{ priceDiscount | currency '￥' }}</span>
         <span>
           <input type="text" v-model=" person.consume " number debounce="200" maxlength="6"
                  onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"
