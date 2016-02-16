@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <title>购物车</title>
-  <link rel="stylesheet" href="../css/swiper-3.3.0.min.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../../css/swiper-3.3.0.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/shop.css">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 
     <div class="row" v-for="goods in cart">
       <div class="col-xs-3">
-        <img class="img-responsive" src="../image/test02.png" alt="">
+        <img class="img-responsive" src="../../image/test02.png" alt="">
       </div>
       <div class="col-xs-9">
         <h4>{{ goods.name }}</h4>
@@ -30,14 +30,14 @@
           <div>
             <p>数量</p>
             <span @click="numMinus(goods)">－</span>
-            <input v-model='goods.num' number debounce="300" type="text" maxlength="2"
-                   onkeyup="this.value=this.value.replace(/[^1-9]/g,'')"
+            <input v-model='goods.num' number debounce="200" type="text" maxlength="2"
+                   onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"
                    onblur="if( this.value == 0 ) this.value = 1;"
             >
             <span @click="numAdd(goods)">＋</span>
           </div>
         </div>
-        <img src="../image/shop_icon/Delete.png" alt="" @click="removeGoods(goods)">
+        <img src="../../image/shop_icon/Delete.png" alt="" @click="removeGoods(goods)">
       </div>
     </div>
 
@@ -47,10 +47,21 @@
         <li v-for="goods in cart">
           <span>{{ goods.name }}</span>
           <span>x{{ goods.num }}</span>
-          <span>{{ priceAll(goods) | currency '￥' }}</span>
+          <span>{{ priceGoods(goods) | currency '￥' }}</span>
         </li>
       </ul>
-      <p>商品价格<span>{{ priceCount | currency '￥' }}</span></p>
+      <p>商品价格<span>{{ priceAll | currency '￥' }}</span></p>
+      <p>运费 <span>￥8.00</span></p>
+      <p>迈豆折扣
+        <span>{{ priceDiscount | currency '￥' }}</span>
+        <span>
+          <input type="text" v-model=" person.consume " number debounce="200" maxlength="6"
+                 onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"
+          @blur="beansConsume()"
+          >
+          迈豆
+        </span>
+      </p>
     </div>
     <div class="navbar-fixed-bottom cart-submit">
       <div class="col-xs-8">
@@ -68,8 +79,8 @@
     <nav class="navbar-fixed-bottom">
 
       <div class="nav-button">
-        <a href="shop">
-          <img src="../image/shop_nav/HOME-1.png" alt=""><br>
+        <a href="">
+          <img src="../../image/shop_nav/HOME-1.png" alt=""><br>
 
           <p class="nav-active">首页</p>
         </a>
@@ -77,7 +88,7 @@
 
       <div class="nav-button">
         <a href="shop_category">
-          <img src="../image/shop_nav/classification.png" alt=""><br>
+          <img src="../../image/shop_nav/classification.png" alt=""><br>
 
           <p>分类</p>
         </a>
@@ -85,7 +96,7 @@
 
       <div class="nav-button">
         <a href="shop_cart">
-          <img src="../image/shop_nav/SHOPPING.png" alt=""><br>
+          <img src="../../image/shop_nav/SHOPPING.png" alt=""><br>
 
           <p>购物车</p>
         </a>
@@ -93,7 +104,7 @@
 
       <div class="nav-button">
         <a href="shop_order">
-          <img src="../image/shop_nav/NOTEPAD.png" alt=""><br>
+          <img src="../../image/shop_nav/NOTEPAD.png" alt=""><br>
 
           <p>订单</p>
         </a>
@@ -101,7 +112,7 @@
 
       <div class="nav-button">
         <a href="shop_person">
-          <img src="../image/shop_nav/USER.png" alt=""><br>
+          <img src="../../image/shop_nav/USER.png" alt=""><br>
 
           <p>个人</p>
         </a>
@@ -112,9 +123,9 @@
 
 </div>
 
-<script src="../js/vendor/jquery-2.1.4.min.js"></script>
-<script src="../js/vendor/vue.js"></script>
-<script src="../js/shop_cart.js"></script>
+<script src="../../js/vendor/jquery-2.1.4.min.js"></script>
+<script src="../../js/vendor/vue.js"></script>
+<script src="../../js/shop_cart.js"></script>
 
 </body>
 </html>
